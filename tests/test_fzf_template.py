@@ -68,3 +68,11 @@ def test_get_conf_fn(fn):
     conf_fn = fzf_template.get_conf_fn('/home/test/.config/fzf_template', fn)
 
     assert conf_fn == expected
+
+
+def test_get_conf_fn_relative_subdir():
+    expected = '/home/test/.config/fzf_template/subdir/test.conf'
+    conf_fn = fzf_template.get_conf_fn('/home/test/.config/fzf_template',
+                                       'subdir/test.conf')
+
+    assert conf_fn == expected
