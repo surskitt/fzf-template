@@ -11,30 +11,31 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+with open('requirements.txt') as requirements_file:
+    requirements = requirements_file.readlines()
 
 setup_requirements = ['pytest-runner', ]
 
 test_requirements = ['pytest', ]
 
 setup(
-    author="\"Shane Donohoe",
+    author="Shane Donohoe",
     author_email='shane@donohoe.cc',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
     description="Template files using yaml config and an fzf selector",
     install_requires=requirements,
+    entry_points={
+        "console_scripts": [
+            'fzf_template = fzf_template.fzf_template:main'
+        ]
+    },
     license="BSD license",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
