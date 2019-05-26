@@ -62,12 +62,8 @@ def test_apply_template():
 
 
 @pytest.mark.parametrize('fn', ['test.conf',
-                                '~/.config/fzf_template/test.conf',
                                 '/home/test/.config/fzf_template/test.conf'])
-@unittest.mock.patch('fzf_template.fzf_template.os.path.expanduser')
-def test_get_conf_fn(mock_os_expanduser, fn):
-    mock_os_expanduser.side_effect = lambda x: x.replace('~', '/home/test')
-
+def test_get_conf_fn(fn):
     expected = '/home/test/.config/fzf_template/test.conf'
     conf_fn = fzf_template.get_conf_fn('/home/test/.config/fzf_template', fn)
 

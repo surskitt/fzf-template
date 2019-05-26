@@ -19,7 +19,10 @@ def apply_template(template, values):
 
 
 def get_conf_fn(conf_dir, fn):
-    fn = os.path.expanduser(fn)
     if not fn.startswith('/'):
         fn = os.path.join(conf_dir, fn)
     return fn
+
+
+def main():
+    pass
