@@ -14,8 +14,8 @@ fzf-template
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/shanedabes/fzf_template/shield.svg
-     :target: https://pyup.io/repos/github/shanedabes/fzf_template/
+.. image:: https://pyup.io/repos/github/shanedabes/fzf-template/shield.svg
+     :target: https://pyup.io/repos/github/shanedabes/fzf-template/
      :alt: Updates
 
 
