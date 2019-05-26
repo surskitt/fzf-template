@@ -48,8 +48,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'fzf-template'
-copyright = u"2019, "Shane Donohoe"
-author = u""Shane Donohoe"
+copyright = u"2019, Shane Donohoe"
+author = u"Shane Donohoe"
 
 # The version info for the project you're documenting, acts as replacement
 # for |version| and |release|, also used in various other places throughout

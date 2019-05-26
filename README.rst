@@ -30,7 +30,8 @@ Template files using yaml config and an fzf selector
 Features
 --------
 
-* TODO
+* Select a set of template keys and values using an encompassing key
+* Apply template values to one or more templates
 
 Credits
 -------
