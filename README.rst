@@ -3,8 +3,8 @@ fzf-template
 ============
 
 
-.. image:: https://img.shields.io/pypi/v/fzf_template.svg
-        :target: https://pypi.python.org/pypi/fzf_template
+.. image:: https://img.shields.io/pypi/v/fzf-template.svg
+        :target: https://pypi.python.org/pypi/fzf-template
 
 .. image:: https://img.shields.io/travis/shanedabes/fzf-template.svg
         :target: https://travis-ci.org/shanedabes/fzf-template
