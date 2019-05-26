@@ -6,8 +6,8 @@ fzf-template
 .. image:: https://img.shields.io/pypi/v/fzf_template.svg
         :target: https://pypi.python.org/pypi/fzf_template
 
-.. image:: https://img.shields.io/travis/shanedabes/fzf_template.svg
-        :target: https://travis-ci.org/shanedabes/fzf_template
+.. image:: https://img.shields.io/travis/shanedabes/fzf-template.svg
+        :target: https://travis-ci.org/shanedabes/fzf-template
 
 .. image:: https://readthedocs.org/projects/fzf-template/badge/?version=latest
         :target: https://fzf-template.readthedocs.io/en/latest/?badge=latest
