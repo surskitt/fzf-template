@@ -3,7 +3,23 @@
 """Main module."""
 
 import os
+import argparse
+
 import iterfzf
+
+
+def input_fn_validator(fn):
+    return os.path.expanduser(str(fn))
+
+
+def parse_args(args):
+    desc = 'Template files using yaml config and an fzf selector'
+    parser = argparse.ArgumentParser(description=desc)
+
+    parser.add_argument('-i', '--input', type=input_fn_validator,
+                        required=True)
+
+    return parser.parse_args(args)
 
 
 def conf_keys(conf_dict):

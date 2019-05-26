@@ -76,3 +76,16 @@ def test_get_conf_fn_relative_subdir():
                                        'subdir/test.conf')
 
     assert conf_fn == expected
+
+
+@pytest.mark.parametrize('fn', ['/home/test/.config/fzf_template/test.conf',
+                                '~/.config/fzf_template/test.conf'])
+@unittest.mock.patch('fzf_template.fzf_template.os.path.expanduser')
+def test_parse_args_input_conf(mock_os_expanduser, fn):
+    mock_os_expanduser.side_effect = lambda x: x.replace('~', '/home/test')
+    expected = '/home/test/.config/fzf_template/test.conf'
+
+    opts = f'--input {fn}'.split()
+    args = fzf_template.parse_args(opts)
+
+    assert args.input == expected
