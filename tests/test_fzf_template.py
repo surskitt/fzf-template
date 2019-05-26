@@ -63,19 +63,19 @@ def test_apply_template():
 
 @pytest.mark.parametrize('fn', ['test.conf',
                                 '/home/test/.config/fzf_template/test.conf'])
-def test_get_conf_fn(fn):
+def test_get_abs_fn(fn):
     expected = '/home/test/.config/fzf_template/test.conf'
-    conf_fn = fzf_template.get_conf_fn('/home/test/.config/fzf_template', fn)
+    abs_fn = fzf_template.get_abs_fn('/home/test/.config/fzf_template', fn)
 
-    assert conf_fn == expected
+    assert abs_fn == expected
 
 
-def test_get_conf_fn_relative_subdir():
+def test_get_abs_fn_relative_subdir():
     expected = '/home/test/.config/fzf_template/subdir/test.conf'
-    conf_fn = fzf_template.get_conf_fn('/home/test/.config/fzf_template',
-                                       'subdir/test.conf')
+    abs_fn = fzf_template.get_abs_fn('/home/test/.config/fzf_template',
+                                     'subdir/test.conf')
 
-    assert conf_fn == expected
+    assert abs_fn == expected
 
 
 @pytest.mark.parametrize('fn', ['/home/test/.config/fzf_template/test.conf',
