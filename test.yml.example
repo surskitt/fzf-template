@@ -1,0 +1,10 @@
+values:
+  "monospace":
+    font: monospace
+  "Tamsyn":
+    font: Misc Tamsyn
+  "Source Code Pro":
+    font: SauceCodePro Nerd Font Mono
+templates:
+  - src: xst_font.Xresources
+    dest: ~/.Xresources.d/xst_font.Xresources
